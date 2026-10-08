@@ -2266,6 +2266,139 @@ font-family: "Exo", sans-serif;
     padding: 0 !important;
 }
 
+/* =========================================
+   CONTACT PAGE
+   ========================================= */
+
+.egos-contact-intro {
+    padding: 90px 0 70px;
+}
+
+.egos-contact-layout {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.egos-contact-info {
+    flex: 1;
+}
+
+.egos-contact-image {
+    flex: 1;
+}
+
+.egos-contact-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Contact headings */
+
+.egos-contact-info .contact-title {
+    margin-bottom: 20px;
+}
+
+.egos-contact-info .contact-title h5 {
+    margin-bottom: 0;
+}
+
+
+/* Individual contact information */
+
+.egos-contact-info .single-contact-info {
+    margin-bottom: 20px;
+}
+
+.egos-contact-info .single-contact-info p {
+    margin: 0;
+}
+
+
+/* =========================================
+   SOCIAL LINKS — HORIZONTAL
+   ========================================= */
+
+.egos-social-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.egos-social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(255,255,255,0.35);
+    border-radius: 50%;
+
+    color: #fff;
+
+    transition: all 0.3s ease;
+}
+
+.egos-social-links a:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 0 10px rgba(255,255,255,0.5),
+        0 0 25px rgba(255,255,255,0.25);
+
+    border-color: #fff;
+    color: #fff;
+}
+
+.egos-social-links i {
+    font-size: 18px;
+}
+
+
+/* =========================================
+   BOOKING FORM
+   ========================================= */
+
+.egos-booking-section {
+    padding: 70px 0 100px;
+}
+
+.egos-booking-section .section-heading {
+    margin-bottom: 50px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .egos-contact-intro {
+        padding: 60px 0 50px;
+    }
+
+    .egos-contact-layout {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .egos-contact-info,
+    .egos-contact-image {
+        width: 100%;
+    }
+
+    .egos-social-links {
+        gap: 15px;
+    }
+
+}
+
 .footer-area .footer-nav ul li a {
     white-space: nowrap !important;
 }
