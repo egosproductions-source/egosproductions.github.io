@@ -380,6 +380,36 @@
             text-decoration: none;
         }
 
+        /* =========================================
+   CONTACT FEATURED BACKGROUND
+   ========================================= */
+
+.egos-contact-featured {
+    position: relative;
+    width: 100%;
+    padding: 75px 0;
+    margin: 0;
+    overflow: hidden;
+
+    background-image: url('images/g (8).jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.egos-contact-featured::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 0;
+}
+
+.egos-contact-featured > .container {
+    position: relative;
+    z-index: 1;
+}
+
 
         /* =========================================
            MOBILE
