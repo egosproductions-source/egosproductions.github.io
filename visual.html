@@ -1,10 +1,12 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="description"
-        content="e-Gos Productions — video, visual art, performance, music, and experimental work.">
+        content="e-Gos Productions — visual art, photography, mixed media, and experimental visual work.">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -13,7 +15,8 @@
 
     <title>e-Gos — Visual</title>
 
-   <!-- Favicon -->
+
+    <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
 
 
@@ -33,15 +36,19 @@
         rel="stylesheet">
 
 
-    <!-- Small Internal Hero CSS -->
+    <!-- =========================================
+         VISUAL PAGE CSS
+         ========================================= -->
+
     <style>
 
         /* =========================================
-           SMALL INTERNAL HERO
+           INTERNAL HERO
            ========================================= */
 
         .egos-internal-hero {
             position: relative;
+
             width: 100%;
             height: 320px;
 
@@ -52,16 +59,14 @@
             justify-content: center;
 
             margin: 0;
+            padding: 0;
         }
 
 
         .egos-internal-hero-bg {
             position: absolute;
 
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
 
             width: 100%;
             height: 100%;
@@ -79,12 +84,14 @@
 
             position: absolute;
 
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
 
-            background: rgba(0, 0, 0, 0.25);
+            background: radial-gradient(
+                ellipse at center,
+                rgba(0,0,0,0.05) 15%,
+                rgba(0,0,0,0.25) 50%,
+                rgba(0,0,0,0.75) 100%
+            );
 
             z-index: 1;
         }
@@ -95,6 +102,8 @@
 
             z-index: 2;
 
+            width: 100%;
+
             text-align: center;
         }
 
@@ -102,11 +111,14 @@
         .egos-internal-hero-content h2 {
             position: relative;
 
+            display: inline-block;
+
             margin: 0;
 
-            color: #ffffff;
+            color: #fff;
 
             font-size: 60px;
+            line-height: 1;
 
             font-weight: 700;
 
@@ -135,24 +147,241 @@
 
 
         /* =========================================
-           VIDEO IFRAMES
+           MEDIA SECTION
            ========================================= */
 
-        .egos-video-item iframe {
-            display: block;
+        .egos-media-section {
+            position: relative;
 
             width: 100%;
 
-            aspect-ratio: 16 / 9;
-
-            border: 0;
+            padding: 70px 0;
 
             margin: 0;
+
+            overflow: hidden;
         }
 
 
         /* =========================================
-           MOBILE HERO
+           GALLERY BACKGROUND
+           ========================================= */
+
+        .egos-visual-gallery {
+            background-image:
+                linear-gradient(
+                    rgba(0,0,0,0.45),
+                    rgba(0,0,0,0.45)
+                ),
+                url('images/g (8).jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+        }
+
+
+        .egos-visual-gallery::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: radial-gradient(
+                ellipse at center,
+                transparent 10%,
+                rgba(0,0,0,0.15) 50%,
+                rgba(0,0,0,0.65) 100%
+            );
+
+            pointer-events: none;
+
+            z-index: 0;
+        }
+
+
+        /* =========================================
+           CONTENT CONTAINER
+           ========================================= */
+
+        .egos-media-container {
+            position: relative;
+
+            z-index: 1;
+
+            width: 100%;
+
+            max-width: 1050px;
+
+            margin: 0 auto;
+
+            padding: 0 20px;
+
+            box-sizing: border-box;
+        }
+
+
+        /* =========================================
+           SECTION HEADING
+           ========================================= */
+
+        .egos-section-heading {
+            width: 100%;
+
+            text-align: center;
+
+            margin: 0 0 35px;
+
+            padding: 0;
+        }
+
+
+        .egos-section-heading p {
+            margin: 0 0 8px;
+
+            color: rgba(255,255,255,0.7);
+
+            font-size: 13px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 3px;
+        }
+
+
+        .egos-section-heading h2 {
+            margin: 0;
+
+            padding: 0;
+
+            color: #fff;
+
+            font-size: 32px;
+
+            line-height: 1.2;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           FEATURE IMAGE
+           ========================================= */
+
+        .egos-visual-feature {
+            width: 100%;
+
+            margin: 0 0 25px;
+
+            overflow: hidden;
+
+            background: #000;
+        }
+
+
+        .egos-visual-feature img {
+            display: block;
+
+            width: 100%;
+
+            height: 560px;
+
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+        }
+
+
+        .egos-visual-feature:hover img {
+            transform: scale(1.02);
+        }
+
+
+        /* =========================================
+           IMAGE GRID
+           ========================================= */
+
+        .egos-visual-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 25px;
+
+            width: 100%;
+        }
+
+
+        .egos-visual-grid-item {
+            width: 100%;
+
+            overflow: hidden;
+
+            background: #000;
+        }
+
+
+        .egos-visual-grid-item img {
+            display: block;
+
+            width: 100%;
+
+            height: 400px;
+
+            object-fit: cover;
+
+            transition: transform 0.5s ease;
+        }
+
+
+        .egos-visual-grid-item:hover img {
+            transform: scale(1.03);
+        }
+
+
+        /* =========================================
+           CONTACT CTA
+           ========================================= */
+
+        .egos-contact-section {
+            position: relative;
+
+            width: 100%;
+
+            padding: 80px 0;
+
+            margin: 0;
+
+            background-image:
+                linear-gradient(
+                    rgba(0,0,0,0.45),
+                    rgba(0,0,0,0.45)
+                ),
+                url('images/g (9).jpg');
+
+            background-size: cover;
+
+            background-position: center;
+
+            background-attachment: fixed;
+        }
+
+
+        .egos-contact-section .section-heading {
+            margin-bottom: 0;
+        }
+
+
+        .egos-contact-section .section-heading h2 {
+            color: #fff;
+        }
+
+
+        /* =========================================
+           MOBILE
            ========================================= */
 
         @media (max-width: 767px) {
@@ -161,8 +390,41 @@
                 height: 240px;
             }
 
+
             .egos-internal-hero-content h2 {
                 font-size: 42px;
+            }
+
+
+            .egos-media-section {
+                padding: 55px 0;
+            }
+
+
+            .egos-visual-gallery {
+                background-attachment: scroll;
+            }
+
+
+            .egos-visual-feature img {
+                height: 350px;
+            }
+
+
+            .egos-visual-grid {
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+
+            .egos-visual-grid-item img {
+                height: 350px;
+            }
+
+
+            .egos-contact-section {
+                background-attachment: scroll;
             }
 
         }
@@ -191,7 +453,6 @@
         </div>
 
     </div>
-
 
 
     <!-- =========================================
@@ -243,7 +504,6 @@
 
                         <div class="classy-menu">
 
-
                             <div class="classycloseIcon">
 
                                 <div class="cross-wrap">
@@ -260,69 +520,53 @@
 
                                 <ul>
 
-
                                     <li>
-
                                         <a href="index.html">
                                             Home
                                         </a>
-
                                     </li>
 
 
                                     <li>
-
                                         <a href="audio.html">
                                             Audio
                                         </a>
+                                    </li>
 
+
+                                    <li>
+                                        <a href="video.html">
+                                            Video
+                                        </a>
                                     </li>
 
 
                                     <li class="active">
-
-                                        <a href="video.html">
-                                            Video
-                                        </a>
-
-                                    </li>
-
-
-                                    <li>
-
                                         <a href="visual.html">
                                             Visual
                                         </a>
-
                                     </li>
 
 
                                     <li>
-
                                         <a href="performance.html">
                                             Performance
                                         </a>
-
                                     </li>
 
 
                                     <li>
-
                                         <a href="event.html">
                                             Events
                                         </a>
-
                                     </li>
 
 
                                     <li>
-
                                         <a href="contact.html">
                                             Contact
                                         </a>
-
                                     </li>
-
 
                                 </ul>
 
@@ -341,15 +585,11 @@
     </header>
 
 
-
     <!-- =========================================
-         SMALL INTERNAL HERO
+         INTERNAL HERO
          ========================================= -->
 
     <section class="egos-internal-hero">
-
-
-        <!-- HERO BACKGROUND -->
 
         <div
             class="egos-internal-hero-bg"
@@ -357,125 +597,134 @@
         </div>
 
 
-        <!-- HERO TEXT -->
-
         <div class="egos-internal-hero-content">
 
             <h2>
-Visual
+
+                Visual
 
                 <span>
-                 Visual
+                    Visual
                 </span>
 
             </h2>
 
         </div>
 
+    </section>
+
+
+    <!-- =========================================
+         VISUAL GALLERY
+         ========================================= -->
+
+    <section class="egos-media-section egos-visual-gallery">
+
+        <div class="egos-media-container">
+
+
+            <!-- SECTION HEADING -->
+
+            <div class="egos-section-heading">
+
+                <p>Visual Work</p>
+
+                <h2>Gallery</h2>
+
+            </div>
+
+
+            <!-- FEATURE IMAGE -->
+
+            <div class="egos-visual-feature">
+
+                <img
+                    src="images/gvisual (1).JPG"
+                    alt="e-Gos visual artwork">
+
+            </div>
+
+
+            <!-- IMAGE GRID -->
+
+            <div class="egos-visual-grid">
+
+
+                <div class="egos-visual-grid-item">
+
+                    <img
+                        src="images/gvisual (2).JPG"
+                        alt="e-Gos visual artwork">
+
+                </div>
+
+
+                <div class="egos-visual-grid-item">
+
+                    <img
+                        src="images/gvisual (3).JPG"
+                        alt="e-Gos visual artwork">
+
+                </div>
+
+
+                <div class="egos-visual-grid-item">
+
+                    <img
+                        src="images/gvisual (4).JPG"
+                        alt="e-Gos visual artwork">
+
+                </div>
+
+
+                <div class="egos-visual-grid-item">
+
+                    <img
+                        src="images/gvisual (5).JPG"
+                        alt="e-Gos visual artwork">
+
+                </div>
+
+
+            </div>
+
+        </div>
 
     </section>
 
-<!-- =========================================
-     e-GOS IMAGE GRID
-     ========================================= -->
 
-<section class="egos-image-grid-section">
+    <!-- =========================================
+         CONTACT CTA
+         ========================================= -->
 
-    <div class="egos-image-grid-container">
+    <section
+        class="egos-contact-section">
 
+        <div class="container">
 
-        <!-- HEADING -->
+            <div class="row">
 
-        <div class="egos-image-grid-heading">
+                <div class="col-12">
 
-            <p>Visual Work</p>
+                    <div
+                        class="section-heading white wow fadeInUp"
+                        data-wow-delay="100ms">
 
-            <h2>Gallery</h2>
-
-        </div>
-
-
-        <!-- LARGE FEATURE IMAGE -->
-
-        <div class="egos-image-grid-feature">
-
-            <img
-                src="images/gvisual (1).JPG"
-                alt="">
-
-        </div>
+                        <h2>
+                            Get In Touch
+                        </h2>
 
 
-        <!-- TWO-COLUMN IMAGE GRID -->
+                        <a
+                            href="contact.html"
+                            class="btn oneMusic-btn mt-30 wow fadeInUp"
+                            data-wow-delay="300ms">
 
-        <div class="egos-image-grid">
+                            Contact
 
+                        </a>
 
-            <div class="egos-image-grid-item">
-
-                <img
-                    src="images/gvisual (2).JPG"
-                    alt="">
-
-            </div>
-
-
-            <div class="egos-image-grid-item">
-
-                <img
-                    src="images/gvisual (3).JPG"
-                    alt="">
-
-            </div>
-
-
-            <div class="egos-image-grid-item">
-
-                <img
-                    src="images/gvisual (4).JPG"
-                    alt="">
-
-            </div>
-
-
-            <div class="egos-image-grid-item">
-
-                <img
-                    src="images/gvisual (5).JPG"
-                    alt="">
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-   <!-- ##### Contact Area Start ##### -->
-<section
-    id="contact"
-    class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img"
-    style="background-image: url('images/g (9).jpg');">
-
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-12">
-
-                <div
-                    class="section-heading white wow fadeInUp"
-                    data-wow-delay="100ms">
-
-                    <h2>Get In Touch</h2>
-
-                    <a href="contact.html"
-                       class="btn oneMusic-btn mt-30 wow fadeInUp"
-                       data-wow-delay="300ms">
-                        Contact
-                    </a>
+                    </div>
 
                 </div>
 
@@ -483,106 +732,133 @@ Visual
 
         </div>
 
-    </div>
-
-</section>
-<!-- ##### Contact Area End ##### -->
-    
-<!-- =========================================
-     FOOTER
-     ========================================= -->
-
-<footer class="footer-area">
-
-    <div class="container">
-
-        <div class="row d-flex flex-wrap align-items-center">
-
-            <!-- LOGO + COPYRIGHT -->
-            <div class="col-12 col-md-6">
-
-                <a href="index.html" class="footer-logo">
-                    <img
-                        src="images/longlogomerge1.png"
-                        alt="e-Gos Productions">
-                </a>
-
-                <p class="copywrite-text" style="font-size: 12px;">
-
-                    Copyright &copy;
-
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-
-                    e-Gos Productions.
-                    All rights reserved.
-
-                </p>
-
-            </div>
+    </section>
 
 
-            <!-- FOOTER NAVIGATION -->
-            <div class="col-12 col-md-6">
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
 
-                <nav class="footer-nav">
+    <footer class="footer-area">
 
-                    <ul>
+        <div class="container">
 
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
+            <div class="row d-flex flex-wrap align-items-center">
 
-                        <li>
-                            <a href="audio.html">Audio</a>
-                        </li>
 
-                        <li>
-                            <a href="video.html">Video</a>
-                        </li>
+                <!-- LOGO + COPYRIGHT -->
 
-                        <li>
-                            <a href="visual.html">Visual</a>
-                        </li>
+                <div class="col-12 col-md-6">
 
-                        <li>
-                            <a href="performance.html">Performance</a>
-                        </li>
+                    <a
+                        href="index.html"
+                        class="footer-logo">
 
-                        <li>
-                            <a href="event.html">Events</a>
-                        </li>
+                        <img
+                            src="images/longlogomerge1.png"
+                            alt="e-Gos Productions">
 
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
+                    </a>
 
-                    </ul>
 
-                </nav>
+                    <p
+                        class="copywrite-text"
+                        style="font-size: 12px;">
+
+                        Copyright &copy;
+
+                        <script>
+                            document.write(
+                                new Date().getFullYear()
+                            );
+                        </script>
+
+                        e-Gos Productions.
+                        All rights reserved.
+
+                    </p>
+
+                </div>
+
+
+                <!-- FOOTER NAVIGATION -->
+
+                <div class="col-12 col-md-6">
+
+                    <nav class="footer-nav">
+
+                        <ul>
+
+                            <li>
+                                <a href="index.html">
+                                    Home
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="audio.html">
+                                    Audio
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="video.html">
+                                    Video
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="visual.html">
+                                    Visual
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="performance.html">
+                                    Performance
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="event.html">
+                                    Events
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html">
+                                    Contact
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
+    </footer>
 
-</footer>
 
-<!-- ##### Footer Area End ##### -->
+    <!-- =========================================
+         JAVASCRIPT
+         ========================================= -->
 
-    <!-- ##### All Javascript Script ##### -->
-    <!-- jQuery-2.2.4 js -->
     <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
+
     <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
+
     <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
+
     <script src="js/plugins/plugins.js"></script>
-    <!-- Active js -->
+
     <script src="js/active.js"></script>
+
+
 </body>
 
 </html>
