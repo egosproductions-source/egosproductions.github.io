@@ -1,4 +1,5 @@
- <!DOCTYPE html>
+```html
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -155,74 +156,86 @@
         }
 
 
-       /* =========================================
-   MEDIA SECTIONS
-   ========================================= */
+        /* =========================================
+           MEDIA SECTION
+           ========================================= */
 
-.egos-media-section {
-    width: 100%;
-    padding: 55px 0;
-    margin: 0;
+        .egos-media-section {
+            width: 100%;
+            padding: 55px 0;
+            margin: 0;
 
-    position: relative;
-    overflow: hidden;
-}
-
-
-.egos-media-container {
-    width: 100%;
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
+            position: relative;
+            overflow: hidden;
+        }
 
 
-/* =========================================
-   MEDIA BACKGROUND VIGNETTE
-   ========================================= */
+        .egos-media-container {
+            width: 100%;
+            max-width: 1050px;
+            margin: 0 auto;
+            padding: 0 20px;
 
-.egos-media-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: radial-gradient(
-        ellipse at center,
-        transparent 10%,
-        rgba(0, 0, 0, 0.25) 50%,
-        rgba(0, 0, 0, 0.75) 100%
-    );
-
-    z-index: 0;
-    pointer-events: none;
-}
-
-.egos-media-section > * {
-    position: relative;
-    z-index: 1;
-}
+            box-sizing: border-box;
+        }
 
 
-/* =========================================
-   SECTION HEADING
-   ========================================= */
+        /* =========================================
+           MEDIA BACKGROUND VIGNETTE
+           ========================================= */
 
-.egos-section-heading {
-    width: 100%;
-    text-align: center;
-    margin: 0 0 28px;
-    padding: 0;
-}
+        .egos-media-section::before {
+            content: "";
 
-.egos-section-heading h2 {
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    font-size: 32px;
-    line-height: 1.2;
-    font-weight: 600;
-}
+            position: absolute;
+
+            inset: 0;
+
+            background: radial-gradient(
+                ellipse at center,
+                transparent 10%,
+                rgba(0, 0, 0, 0.25) 50%,
+                rgba(0, 0, 0, 0.75) 100%
+            );
+
+            z-index: 0;
+
+            pointer-events: none;
+        }
+
+
+        .egos-media-section > * {
+            position: relative;
+
+            z-index: 1;
+        }
+
+
+        /* =========================================
+           SECTION HEADING
+           ========================================= */
+
+        .egos-section-heading {
+            width: 100%;
+
+            text-align: center;
+
+            margin: 0 0 28px;
+            padding: 0;
+        }
+
+
+        .egos-section-heading h2 {
+            margin: 0;
+            padding: 0;
+
+            color: #fff;
+
+            font-size: 32px;
+            line-height: 1.2;
+
+            font-weight: 600;
+        }
 
 
         /* =========================================
@@ -232,7 +245,7 @@
         .egos-featured-video {
             width: 100%;
 
-            margin: 0;
+            margin: 0 0 70px;
             padding: 0;
         }
 
@@ -535,6 +548,7 @@
             <div></div>
             <div></div>
             <div></div>
+            <div></div>
 
         </div>
 
@@ -689,19 +703,36 @@
 
 
     <!-- =========================================
-         FEATURED VIDEO
+         ONE CONTINUOUS VIDEO MEDIA SECTION
          ========================================= -->
-<section>
-        <div class="egos-featured-video">
 
-            <div class="egos-section-heading">
+    <section
+        class="egos-media-section"
+        style="
+            background-image: url('images/g (8).jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        ">
 
-                <h2>Featured</h2>
 
-            </div>
+        <div class="egos-media-container">
 
+
+            <!-- =========================================
+                 FEATURED VIDEO
+                 ========================================= -->
 
             <div class="egos-featured-video">
+
+                <div class="egos-section-heading">
+
+                    <h2>
+                        Featured
+                    </h2>
+
+                </div>
+
 
                 <div class="egos-video-title">
 
@@ -726,18 +757,18 @@
 
             </div>
 
-        </div>
 
+            <!-- =========================================
+                 VIDEO ARCHIVE
+                 ========================================= -->
 
-    <!-- =========================================
-         VIDEO ARCHIVE
-         ========================================= -->
- 
-  <div class="egos-featured-video">
+            <div class="egos-video-archive">
 
                 <div class="egos-section-heading">
 
-                    <h2>Archive</h2>
+                    <h2>
+                        Archive
+                    </h2>
 
                 </div>
 
@@ -797,7 +828,14 @@
 
 
                     <div class="egos-video-frame">
-<iframe src="https://player.vimeo.com/video/1231761810?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="002_Fueled by Chaos.MOV"></iframe>
+
+                        <iframe
+                            src="https://player.vimeo.com/video/1231761810?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            title="Fueled by Chaos"
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
 
                     </div>
 
@@ -1013,3 +1051,4 @@
 </body>
 
 </html>
+```
