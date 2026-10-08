@@ -17,7 +17,7 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>e-Gos — Performance</title>
+    <title>e-Gos — Audio</title>
 
     <!-- Favicon -->
     <link rel="icon" href="img/core-img/favicon.ico">
@@ -143,28 +143,30 @@
         }
 
 
-        /* =========================================
-           GENERAL MEDIA SECTION
-           ========================================= */
+      .egos-media-section {
+    position: relative;
+    overflow: hidden;
+}
 
-        .egos-media-section {
-            width: 100%;
+.egos-media-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
 
-            padding: 55px 0;
-            margin: 0;
-        }
+    background: radial-gradient(
+        ellipse at center,
+        transparent 15%,
+        rgba(0, 0, 0, 0.3) 55%,
+        rgba(0, 0, 0, 0.85) 100%
+    );
+}
 
-        .egos-media-container {
-            width: 100%;
-            max-width: 1050px;
-
-            margin: 0 auto;
-
-            padding: 0 20px;
-
-            box-sizing: border-box;
-        }
-
+.egos-media-section > * {
+    position: relative;
+    z-index: 1;
+}
 
         /* =========================================
            SECTION HEADING
@@ -544,7 +546,7 @@
                                         <a href="index.html">Home</a>
                                     </li>
 
-                                    <li>
+                                    <li class="active">
                                         <a href="audio.html">Audio</a>
                                     </li>
 
@@ -556,7 +558,7 @@
                                         <a href="visual.html">Visual</a>
                                     </li>
 
-                                    <li class="active">
+                                    <li>
                                         <a href="performance.html">
                                             Performance
                                         </a>
