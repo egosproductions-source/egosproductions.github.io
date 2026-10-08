@@ -1367,28 +1367,69 @@ img {
 .web-button-nav:hover i {
     transform: translateX(3px);
 }
- .footer-nav ul {
+ /* =========================================
+   FOOTER NAV BUTTONS
+   Matches HEADER SOCIAL BUTTONS
+   ========================================= */
+
+.footer-area .footer-nav ul {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
+    justify-content: flex-end;
+    gap: 12px;
     margin: 0;
     padding: 0;
     list-style: none;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
-.footer-nav ul li {
-    display: block;
+.footer-area .footer-nav ul li {
     margin: 0;
     padding: 0;
 }
 
-.footer-nav ul li a {
-    display: block;
-    white-space: nowrap;
+.footer-area .footer-nav ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 34px;
+    padding: 0 12px;
+
+    color: #ffffff;
+    font-size: 13px;
+    font-family: "Exo", sans-serif;
+    font-weight: 700;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease,
+        opacity 0.3s ease;
 }
 
+.footer-area .footer-nav ul li a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+    opacity: 0.7;
+}
+
+
+/* =========================================
+   FOOTER MOBILE
+   ========================================= */
+
+@media only screen and (max-width: 991px) {
+
+    .footer-area .footer-nav ul {
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+}
 
         /* -----------------------------------------
            PAGE VARIABLES
