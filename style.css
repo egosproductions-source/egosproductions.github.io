@@ -2220,7 +2220,7 @@ font-family: "Exo", sans-serif;
 
 .footer-area .footer-logo img {
     display: block;
-    max-width: 120px;
+    max-width: 200px;
     width: auto;
     height: auto;
 }
@@ -2242,4 +2242,35 @@ font-family: "Exo", sans-serif;
         padding: 0 8px;
     }
 
+}
+
+/* =========================================
+   FOOTER NAV — KEEP EVERYTHING ON ONE LINE
+   ========================================= */
+
+.footer-area .footer-nav ul {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+
+    gap: 8px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.footer-area .footer-nav ul li {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.footer-area .footer-nav ul li a {
+    white-space: nowrap !important;
 }
