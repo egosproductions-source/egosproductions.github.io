@@ -2402,3 +2402,175 @@ font-family: "Exo", sans-serif;
 .footer-area .footer-nav ul li a {
     white-space: nowrap !important;
 }
+
+/* =========================================
+   EGOS CONTACT FEATURED AREA
+   ========================================= */
+
+.egos-contact-featured {
+    padding: 100px 0;
+}
+
+
+/* FEATURED IMAGE */
+
+.egos-contact-featured-image {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.egos-contact-featured-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* IMAGE OVERLAY */
+
+.egos-contact-featured-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 50px 40px 35px;
+
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.9)
+    );
+}
+
+.egos-contact-featured-overlay h2 {
+    color: #fff;
+    margin: 0 0 5px;
+}
+
+.egos-contact-featured-overlay p {
+    color: rgba(255,255,255,0.7);
+    margin: 0;
+}
+
+
+/* CONTACT CARDS */
+
+.egos-contact-links {
+    margin-top: 50px;
+}
+
+.egos-contact-card {
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.egos-contact-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 20px;
+
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+}
+
+.egos-contact-icon i {
+    font-size: 18px;
+    color: #fff;
+}
+
+.egos-contact-card:hover .egos-contact-icon {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 0 10px rgba(255,255,255,0.5),
+        0 0 25px rgba(255,255,255,0.2);
+}
+
+.egos-contact-card h5 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.egos-contact-card p {
+    margin: 0;
+}
+
+
+/* =========================================
+   HORIZONTAL SOCIAL ICONS
+   ========================================= */
+
+.egos-social-horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.egos-social-horizontal a {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 50%;
+
+    color: #fff;
+
+    transition: all 0.3s ease;
+}
+
+.egos-social-horizontal a:hover {
+    transform: translateY(-3px);
+
+    color: #fff;
+
+    box-shadow:
+        0 0 10px rgba(255,255,255,0.5);
+}
+
+
+/* =========================================
+   BOOKING
+   ========================================= */
+
+.egos-booking-area {
+    padding: 80px 0 110px;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    .egos-contact-featured {
+        padding: 60px 0;
+    }
+
+    .egos-contact-featured-image img {
+        height: 300px;
+    }
+
+    .egos-contact-featured-overlay {
+        padding: 35px 20px 20px;
+    }
+
+    .egos-contact-card {
+        padding: 25px 10px;
+    }
+
+}
