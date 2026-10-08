@@ -2159,6 +2159,12 @@ font-family: "Exo", sans-serif;
     opacity: 0.7;
 }
 
+.footer-area .footer-logo img {
+    display: block;
+    max-width: 120px;
+    width: auto;
+    height: auto;
+}
 
 /* =========================================
    FOOTER MOBILE
