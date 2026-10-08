@@ -1388,80 +1388,114 @@ img {
         }
 
 
-        /* -----------------------------------------
-           HERO
-           ----------------------------------------- */
+        ```css
+/* =========================================
+   E-GOS HERO LOGO
+   ========================================= */
 
-        .egos-video-hero {
-            position: relative;
-            width: 100%;
-            min-height: 70vh;
+.hero-image-effect {
+    position: relative;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-            overflow: hidden;
+    width: 100%;
+    margin: 0 auto 30px auto;
 
-            background:
-                radial-gradient(
-                    circle at 50% 40%,
-                    rgba(29, 78, 216, 0.22),
-                    transparent 28%
-                ),
+    /* Entrance animation */
+    opacity: 0;
 
-                radial-gradient(
-                    circle at 30% 65%,
-                    rgba(76, 29, 149, 0.22),
-                    transparent 35%
-                ),
-
-                linear-gradient(
-                    180deg,
-                    var(--egos-dark-2),
-                    var(--egos-dark)
-                );
-        }
+    animation: eGosHeroEntrance 1.2s ease-out 0.3s forwards;
+}
 
 
-        .egos-video-hero-content {
-            position: relative;
-            z-index: 2;
+/* =========================================
+   HERO LOGO
+   ========================================= */
 
-            text-align: center;
+.hero-image-main {
+    display: block;
 
-            padding: 40px 20px;
-        }
+    width: auto;
+    max-width: 80%;
+    height: auto;
+
+    opacity: 1;
+    visibility: visible;
+
+    background: transparent;
+    border: none;
+    box-shadow: none;
+
+    /* Glow belongs ONLY to the image */
+    filter:
+        drop-shadow(0 0 5px rgba(255,255,255,0.35))
+        drop-shadow(0 0 12px rgba(255,255,255,0.18));
+
+    /* Continuous glow after entrance */
+    animation: eGosLogoGlow 3s ease-in-out 1.5s infinite;
+}
 
 
-        .egos-video-hero-content p {
-            margin: 0 0 15px;
+/* =========================================
+   ENTRANCE ANIMATION
+   ========================================= */
 
-            color: rgba(255,255,255,0.65);
+@keyframes eGosHeroEntrance {
 
-            font-size: 13px;
-          font-family: "Exo", sans-serif;
-            font-weight: 400;
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
 
-            text-transform: uppercase;
-            letter-spacing: 5px;
-        }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
 
 
-        .egos-video-hero-content h1 {
-            margin: 0;
+/* =========================================
+   GLOW ANIMATION
+   ========================================= */
 
-            color: #fff;
+@keyframes eGosLogoGlow {
 
-            font-size: clamp(55px, 9vw, 120px);
-            line-height: 0.95;
-font-family: "Exo", sans-serif;
-            font-weight: 700;
-            letter-spacing: 5px;
+    0% {
+        filter:
+            drop-shadow(0 0 5px rgba(255,255,255,0.35))
+            drop-shadow(0 0 12px rgba(255,255,255,0.18));
+    }
 
-            text-transform: uppercase;
-        }
+    50% {
+        filter:
+            drop-shadow(0 0 9px rgba(255,255,255,0.65))
+            drop-shadow(0 0 20px rgba(255,255,255,0.35));
+    }
 
+    100% {
+        filter:
+            drop-shadow(0 0 5px rgba(255,255,255,0.35))
+            drop-shadow(0 0 12px rgba(255,255,255,0.18));
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media only screen and (max-width: 767px) {
+
+    .hero-image-main {
+        max-width: 90%;
+    }
+
+}
+```
 
         /* -----------------------------------------
            GENERAL SECTION
