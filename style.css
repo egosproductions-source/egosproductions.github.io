@@ -1931,24 +1931,22 @@ font-family: "Exo", sans-serif;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
+
     width: 100% !important;
     margin: 0 auto 30px auto !important;
 
-    /* Starting position */
-    opacity: 0 !important;
-    transform: translateY(50px) !important;
+    /* Visible by default */
+    opacity: 1 !important;
+    transform: translateY(0) !important;
 
     /* Animation */
-    animation-name: eGosHeroImage !important;
-    animation-duration: 1.2s !important;
-    animation-timing-function: ease-out !important;
-    animation-delay: 0.3s !important;
-    animation-iteration-count: 1 !important;
-    animation-fill-mode: forwards !important;
+    animation: eGosHeroImage 1.2s ease-out 0.3s 1 both !important;
 }
 
 
-/* THE IMAGE */
+/* =========================================
+   THE IMAGE
+   ========================================= */
 
 .hero-image-main {
     display: block !important;
@@ -1957,6 +1955,9 @@ font-family: "Exo", sans-serif;
     width: auto !important;
     max-width: 80% !important;
     height: auto !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
 
     background: transparent !important;
     border: none !important;
@@ -1970,14 +1971,14 @@ font-family: "Exo", sans-serif;
 
 @keyframes eGosHeroImage {
 
-    0% {
-        opacity: 0 !important;
-        transform: translateY(50px) !important;
+    from {
+        opacity: 0;
+        transform: translateY(50px);
     }
 
-    100% {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 
 }
