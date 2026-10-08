@@ -557,3 +557,21 @@ if (modal) {
             initScene();
             requestAnimationFrame(animate);
         }
+
+function shareEGos(event) {
+    event.preventDefault();
+
+    if (navigator.share) {
+        navigator.share({
+            title: 'e-Gos Productions',
+            text: 'Check out e-Gos Productions',
+            url: window.location.href
+        });
+    } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href).then(function() {
+            alert('Link copied! You can now paste it anywhere to share e-Gos Productions.');
+        });
+    } else {
+        alert('Copy this page URL to share e-Gos Productions: ' + window.location.href);
+    }
+}
