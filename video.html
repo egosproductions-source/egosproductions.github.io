@@ -4,6 +4,11 @@
 
 <head>
 
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
     <meta charset="UTF-8">
 
     <meta name="description"
@@ -37,15 +42,33 @@
         rel="stylesheet">
 
 
-    <!-- Small Internal Hero CSS -->
+    <!-- =========================================
+         VIDEO PAGE CSS
+         ========================================= -->
+
     <style>
 
         /* =========================================
-           SMALL INTERNAL HERO
+           PAGE RESET
+           ========================================= */
+
+        .video-page {
+            margin: 0;
+            padding: 0;
+        }
+
+        .video-page section {
+            margin: 0;
+        }
+
+
+        /* =========================================
+           INTERNAL HERO
            ========================================= */
 
         .egos-internal-hero {
             position: relative;
+
             width: 100%;
             height: 320px;
 
@@ -56,16 +79,14 @@
             justify-content: center;
 
             margin: 0;
+            padding: 0;
         }
 
 
         .egos-internal-hero-bg {
             position: absolute;
 
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
 
             width: 100%;
             height: 100%;
@@ -83,10 +104,7 @@
 
             position: absolute;
 
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            inset: 0;
 
             background: rgba(0, 0, 0, 0.25);
 
@@ -99,6 +117,8 @@
 
             z-index: 2;
 
+            width: 100%;
+
             text-align: center;
         }
 
@@ -106,11 +126,14 @@
         .egos-internal-hero-content h2 {
             position: relative;
 
+            display: inline-block;
+
             margin: 0;
 
-            color: #ffffff;
+            color: #fff;
 
             font-size: 60px;
+            line-height: 1;
 
             font-weight: 700;
 
@@ -132,31 +155,298 @@
 
             color: transparent;
 
-            -webkit-text-stroke: 1px rgba(255,255,255,0.25);
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.25);
 
             z-index: -1;
         }
 
 
         /* =========================================
-           VIDEO IFRAMES
+           MEDIA SECTIONS
            ========================================= */
 
-        .egos-video-item iframe {
-            display: block;
-
+        .egos-media-section {
             width: 100%;
 
-            aspect-ratio: 16 / 9;
-
-            border: 0;
+            padding: 55px 0;
 
             margin: 0;
         }
 
 
+        .egos-media-container {
+            width: 100%;
+            max-width: 1050px;
+
+            margin: 0 auto;
+
+            padding: 0 20px;
+
+            box-sizing: border-box;
+        }
+
+
         /* =========================================
-           MOBILE HERO
+           SECTION HEADING
+           ========================================= */
+
+        .egos-section-heading {
+            width: 100%;
+
+            text-align: center;
+
+            margin: 0 0 28px;
+            padding: 0;
+        }
+
+
+        .egos-section-heading h2 {
+            margin: 0;
+
+            padding: 0;
+
+            color: #fff;
+
+            font-size: 32px;
+            line-height: 1.2;
+
+            font-weight: 600;
+        }
+
+
+        /* =========================================
+           FEATURED VIDEO
+           ========================================= */
+
+        .egos-featured-video {
+            width: 100%;
+
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .egos-video-title {
+            text-align: center;
+
+            margin: 0 0 18px;
+            padding: 0;
+        }
+
+
+        .egos-video-title h3 {
+            margin: 0;
+
+            color: #fff;
+
+            font-size: 22px;
+            line-height: 1.3;
+
+            font-weight: 500;
+        }
+
+
+        /* =========================================
+           VIDEO ITEMS
+           ========================================= */
+
+        .egos-video-item {
+            width: 100%;
+
+            margin: 0 0 48px;
+            padding: 0;
+        }
+
+
+        .egos-video-item:last-child {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================================
+           VIDEO TITLES
+           ========================================= */
+
+        .egos-video-item-title {
+            text-align: center;
+
+            margin: 0 0 15px;
+            padding: 0;
+        }
+
+
+        .egos-video-item-title h3 {
+            margin: 0;
+
+            padding: 0;
+
+            color: #fff;
+
+            font-size: 22px;
+            line-height: 1.3;
+
+            font-weight: 500;
+        }
+
+
+        /* =========================================
+           VIDEO FRAME
+           ========================================= */
+
+        .egos-video-frame {
+            position: relative;
+
+            width: 100%;
+
+            aspect-ratio: 16 / 9;
+
+            overflow: hidden;
+
+            margin: 0;
+            padding: 0;
+
+            background: #000;
+        }
+
+
+        .egos-video-frame iframe {
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            border: 0;
+
+            display: block;
+        }
+
+
+        /* =========================================
+           VIDEO CAPTION
+           ========================================= */
+
+        .egos-video-caption {
+            text-align: center;
+
+            margin: 12px 0 0;
+            padding: 0;
+        }
+
+
+        .egos-video-caption p {
+            margin: 0;
+
+            color: rgba(255, 255, 255, 0.75);
+
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           CONTACT CTA
+           ========================================= */
+
+        .egos-contact-section {
+            position: relative;
+
+            width: 100%;
+
+            min-height: 320px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0;
+            padding: 70px 20px;
+
+            background-size: cover;
+            background-position: center;
+
+            overflow: hidden;
+
+            box-sizing: border-box;
+        }
+
+
+        .egos-contact-section::before {
+            content: "";
+
+            position: absolute;
+
+            inset: 0;
+
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+
+        .egos-contact-content {
+            position: relative;
+
+            z-index: 2;
+
+            width: 100%;
+            max-width: 700px;
+
+            text-align: center;
+        }
+
+
+        .egos-contact-content h2 {
+            margin: 0 0 20px;
+
+            color: #fff;
+
+            font-size: 38px;
+            line-height: 1.2;
+        }
+
+
+        .egos-contact-content p {
+            margin: 0 0 25px;
+
+            color: rgba(255, 255, 255, 0.85);
+
+            font-size: 16px;
+        }
+
+
+        .egos-contact-button {
+            display: inline-block;
+
+            padding: 12px 28px;
+
+            border: 1px solid rgba(255, 255, 255, 0.8);
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            transition: all 0.3s ease;
+        }
+
+
+        .egos-contact-button:hover {
+            color: #000;
+
+            background: #fff;
+
+            text-decoration: none;
+        }
+
+
+        /* =========================================
+           MOBILE
            ========================================= */
 
         @media (max-width: 767px) {
@@ -165,8 +455,52 @@
                 height: 240px;
             }
 
+
             .egos-internal-hero-content h2 {
                 font-size: 42px;
+            }
+
+
+            .egos-media-section {
+                padding: 40px 0;
+            }
+
+
+            .egos-media-container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+
+            .egos-section-heading {
+                margin-bottom: 22px;
+            }
+
+
+            .egos-section-heading h2 {
+                font-size: 27px;
+            }
+
+
+            .egos-video-item {
+                margin-bottom: 38px;
+            }
+
+
+            .egos-video-item-title h3 {
+                font-size: 19px;
+            }
+
+
+            .egos-contact-section {
+                min-height: 280px;
+
+                padding: 55px 20px;
+            }
+
+
+            .egos-contact-content h2 {
+                font-size: 30px;
             }
 
         }
@@ -176,7 +510,7 @@
 </head>
 
 
-<body>
+<body class="video-page">
 
 
     <!-- =========================================
@@ -190,12 +524,10 @@
             <div></div>
             <div></div>
             <div></div>
-            <div></div>
 
         </div>
 
     </div>
-
 
 
     <!-- =========================================
@@ -218,8 +550,7 @@
 
                         <!-- LOGO -->
 
-                        <a href="index.html"
-                           class="nav-brand">
+                        <a href="index.html" class="nav-brand">
 
                             <img
                                 src="images/Logo.png"
@@ -247,7 +578,6 @@
 
                         <div class="classy-menu">
 
-
                             <div class="classycloseIcon">
 
                                 <div class="cross-wrap">
@@ -264,69 +594,47 @@
 
                                 <ul>
 
-
                                     <li>
-
                                         <a href="index.html">
                                             Home
                                         </a>
-
                                     </li>
 
-
                                     <li>
-
                                         <a href="audio.html">
                                             Audio
                                         </a>
-
                                     </li>
 
-
                                     <li class="active">
-
                                         <a href="video.html">
                                             Video
                                         </a>
-
                                     </li>
 
-
                                     <li>
-
                                         <a href="visual.html">
                                             Visual
                                         </a>
-
                                     </li>
 
-
                                     <li>
-
                                         <a href="performance.html">
                                             Performance
                                         </a>
-
                                     </li>
 
-
                                     <li>
-
                                         <a href="event.html">
                                             Events
                                         </a>
-
                                     </li>
 
-
                                     <li>
-
                                         <a href="contact.html">
                                             Contact
                                         </a>
-
                                     </li>
-
 
                                 </ul>
 
@@ -345,15 +653,11 @@
     </header>
 
 
-
     <!-- =========================================
-         SMALL INTERNAL HERO
+         HERO
          ========================================= -->
 
     <section class="egos-internal-hero">
-
-
-        <!-- HERO BACKGROUND -->
 
         <div
             class="egos-internal-hero-bg"
@@ -361,213 +665,343 @@
         </div>
 
 
-        <!-- HERO TEXT -->
-
         <div class="egos-internal-hero-content">
 
             <h2>
-
                 Video
-
-                <span>
-                    Video
-                </span>
-
+                <span>Video</span>
             </h2>
 
         </div>
 
-
     </section>
-
 
 
     <!-- =========================================
          FEATURED VIDEO
          ========================================= -->
 
-  <section
-    class="egos-media-section dark bg-img bg-overlay bg-fixed"
-    style="background-image: url('images/g (8).jpg');">
+    <section
+        class="egos-media-section"
+        style="
+            background-image: url('images/g (8).jpg');
+            background-size: cover;
+            background-position: center;
+        ">
 
         <div class="egos-media-container">
 
-
             <div class="egos-section-heading">
 
-            <div class="col-12">
-                <div class="section-heading">
-                    <h2>Featured</h2>
+                <h2>Featured</h2>
+
+            </div>
+
+
+            <div class="egos-featured-video">
+
+                <div class="egos-video-title">
+
+                    <h3>
+                        Jazz Trillest — ABEG! Journey Within / I am Nothing and Everything
+                    </h3>
+
                 </div>
-            </div>
-                  <p>
-                  Jazz Trillest - ABEG! Journey Within/I am nothing and Everything 
-                </p>
+
+
+                <div class="egos-video-frame">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/7U6pNAmdOYc?si=IlTFw0VkJaj81ZWr"
+                        title="Jazz Trillest — ABEG! Journey Within / I am Nothing and Everything"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
 
             </div>
-
-
-            <div class="egos-video-item">
-
-
-       <div class="youtube-container">
-    <iframe
-        src="https://www.youtube.com/embed/7U6pNAmdOYc?si=IlTFw0VkJaj81ZWr"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen>
-    </iframe>
-</div>
-                
-
-
-            </div>
-
 
         </div>
 
     </section>
-
 
 
     <!-- =========================================
          VIDEO ARCHIVE
          ========================================= -->
 
- <section
-    class="egos-media-section blue bg-img bg-overlay bg-fixed"
-    style="background-image: url('images/g (2).jpg');">
+    <section
+        class="egos-media-section"
+        style="
+            background-image: url('images/g (2).jpg');
+            background-size: cover;
+            background-position: center;
+        ">
 
         <div class="egos-media-container">
 
-
             <div class="egos-section-heading">
 
-                <h2>
-                   Archive
-                </h2>
+                <h2>Archive</h2>
 
             </div>
 
 
-
-            <!-- =================================
-                 VIDEO 01
-                 ================================= -->
-
-            <div class="egos-video-item">
-                
-                <div class="egos-section-heading">
-
-                <h2>
-                   The Walleye Project
-                </h2>
-
-            </div>
-
-<iframe src="https://player.vimeo.com/video/1231761863?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="The Walleye Project"></iframe>
-
-                <div class="egos-video-caption">
-
-                    <h3>
-                  bla bala bla bal test
-                    </h3>
-
-                </div>
+            <div class="egos-video-archive">
 
 
-            </div>
+                <!-- =================================
+                     VIDEO 01
+                     ================================= -->
+
+                <div class="egos-video-item">
+
+                    <div class="egos-video-item-title">
+
+                        <h3>
+                            The Walleye Project
+                        </h3>
+
+                    </div>
 
 
+                    <div class="egos-video-frame">
 
-            <!-- =================================
-                 VIDEO 02
-                 ================================= -->
+                        <iframe
+                            src="https://player.vimeo.com/video/1231761863?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            title="The Walleye Project"
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
 
-            <div class="egos-video-item">
-
-                <div class="egos-section-heading">
-
-                <h2>
-                   Fueled by Chaos
-                </h2>
-
-              <div class="youtube-container">
-        <iframe
-            src="https://www.youtube.com/embed/--66uRDZ6vc?si=KD0TKnv9NrIkF6XZ"
-            title="Stoker - Black Memory"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-        </iframe>
-    </div>
-
-                    <p class="text-center mt-20">
-        your caption goes here
-    </p>
-
-</div>
+                    </div>
 
 
-            <!-- =================================
-                 VIDEO 03
-                 ================================= -->
-
-            <div class="egos-video-item">
-<div class="egos-section-heading">
-
-                <h2>
-                   Stoker - Black Memory
-                </h2>
-
-            </div>
-
-                <div class="youtube-container">
- 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/--66uRDZ6vc?si=KD0TKnv9NrIkF6XZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-             
                     <div class="egos-video-caption">
 
-                    <h3>
-                       blablablal
-                    </h3>
+                        <p>
+                            bla bala bla bal test
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     VIDEO 02
+                     ================================= -->
+
+                <div class="egos-video-item">
+
+                    <div class="egos-video-item-title">
+
+                        <h3>
+                            Fueled by Chaos
+                        </h3>
+
+                    </div>
+
+
+                    <div class="egos-video-frame">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/--66uRDZ6vc?si=KD0TKnv9NrIkF6XZ"
+                            title="Fueled by Chaos"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+                    <div class="egos-video-caption">
+
+                        <p>
+                            your caption goes here
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     VIDEO 03
+                     ================================= -->
+
+                <div class="egos-video-item">
+
+                    <div class="egos-video-item-title">
+
+                        <h3>
+                            Stoker — Black Memory
+                        </h3>
+
+                    </div>
+
+
+                    <div class="egos-video-frame">
+
+                        <iframe
+                            src="https://www.youtube.com/embed/--66uRDZ6vc?si=KD0TKnv9NrIkF6XZ"
+                            title="Stoker — Black Memory"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+
+                    <div class="egos-video-caption">
+
+                        <p>
+                            blablablal
+                        </p>
+
+                    </div>
 
                 </div>
 
 
             </div>
-
 
         </div>
 
     </section>
 
-                   <!-- ##### Contact Area Start ##### -->
-<section
-    id="contact"
-    class="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img"
-    style="background-image: url('images/g (9).jpg');">
 
-    <div class="container">
+    <!-- =========================================
+         CONTACT CTA
+         ========================================= -->
 
-        <div class="row">
+    <section
+        class="egos-contact-section"
+        style="background-image: url('images/g (9).jpg');">
 
-            <div class="col-12">
+        <div class="egos-contact-content">
 
-                <div
-                    class="section-heading white wow fadeInUp"
-                    data-wow-delay="100ms">
+            <h2>
+                Get in touch
+            </h2>
 
-                    <h2>Get in touch</h2>
+            <p>
+                Interested in working with e-Gos?
+            </p>
 
-                    <a href="contact.html"
-                       class="btn oneMusic-btn mt-30 wow fadeInUp"
-                       data-wow-delay="300ms">
-                       Contact
+            <a
+                href="contact.html"
+                class="egos-contact-button">
+                Contact
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+         ========================================= -->
+
+    <footer class="footer-area">
+
+        <div class="container">
+
+            <div class="row d-flex flex-wrap align-items-center">
+
+
+                <!-- LOGO + COPYRIGHT -->
+
+                <div class="col-12 col-md-6">
+
+                    <a
+                        href="index.html"
+                        class="footer-logo">
+
+                        <img
+                            src="images/longlogomerge1.png"
+                            alt="e-Gos Productions">
+
                     </a>
+
+
+                    <p
+                        class="copywrite-text"
+                        style="font-size: 12px;">
+
+                        Copyright &copy;
+
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>
+
+                        e-Gos Productions.
+                        All rights reserved.
+
+                    </p>
+
+                </div>
+
+
+                <!-- FOOTER NAVIGATION -->
+
+                <div class="col-12 col-md-6">
+
+                    <nav class="footer-nav">
+
+                        <ul>
+
+                            <li>
+                                <a href="index.html">
+                                    Home
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="audio.html">
+                                    Audio
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="video.html">
+                                    Video
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="visual.html">
+                                    Visual
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="performance.html">
+                                    Performance
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="event.html">
+                                    Events
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="contact.html">
+                                    Contact
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </nav>
 
                 </div>
 
@@ -575,92 +1009,7 @@
 
         </div>
 
-    </div>
-
-</section>
-<!-- ##### Contact Area End ##### -->
-
-  <!-- =========================================
-     FOOTER
-     ========================================= -->
-
-<footer class="footer-area">
-
-    <div class="container">
-
-        <div class="row d-flex flex-wrap align-items-center">
-
-            <!-- LOGO + COPYRIGHT -->
-            <div class="col-12 col-md-6">
-
-                <a href="index.html" class="footer-logo">
-                    <img
-                        src="images/longlogomerge1.png"
-                        alt="e-Gos Productions">
-                </a>
-
-                <p class="copywrite-text" style="font-size: 12px;">
-
-                    Copyright &copy;
-
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>
-
-                    e-Gos Productions.
-                    All rights reserved.
-
-                </p>
-
-            </div>
-
-
-            <!-- FOOTER NAVIGATION -->
-            <div class="col-12 col-md-6">
-
-                <nav class="footer-nav">
-
-                    <ul>
-
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-
-                        <li>
-                            <a href="audio.html">Audio</a>
-                        </li>
-
-                        <li>
-                            <a href="video.html">Video</a>
-                        </li>
-
-                        <li>
-                            <a href="visual.html">Visual</a>
-                        </li>
-
-                        <li>
-                            <a href="performance.html">Performance</a>
-                        </li>
-
-                        <li>
-                            <a href="event.html">Events</a>
-                        </li>
-
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-
-                    </ul>
-
-                </nav>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</footer>
+    </footer>
 
 
     <!-- =========================================
@@ -676,6 +1025,11 @@
     <script src="js/plugins/plugins.js"></script>
 
     <script src="js/active.js"></script>
+
+
+</body>
+
+</html>
 
 
 </body>
